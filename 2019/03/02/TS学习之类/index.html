@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>TS学习之类 | Zipeng&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="李子鹏, 前端开发, 个人博客, WEB前端, 前端博客, 北京前端, html, html5, css, css3, js, hexo, nodejs, es5, es6, canvas, vue, div, style, gulp, linux, hexo theme, material design">
+  
+  <meta name="description" content="定义类1234567891011class Person &amp;#123;    name: string;   //属性    constructor(_name: string) &amp;#123;        this.name = _name;    &amp;#125;   //构造函数    sayHello(): string &amp;#123;        return &quot;Hi,everyone&quot;">
+<meta name="keywords" content="js,Ts,类">
+<meta property="og:type" content="article">
+<meta property="og:title" content="TS学习之类">
+<meta property="og:url" content="https://lizipeng.top/2019/03/02/TS学习之类/index.html">
+<meta property="og:site_name" content="Zipeng&#39;s Blog">
+<meta property="og:description" content="定义类1234567891011class Person &amp;#123;    name: string;   //属性    constructor(_name: string) &amp;#123;        this.name = _name;    &amp;#125;   //构造函数    sayHello(): string &amp;#123;        return &quot;Hi,everyone&quot;">
+<meta property="og:locale" content="language">
+<meta property="og:updated_time" content="2019-03-02T02:16:06.594Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="TS学习之类">
+<meta name="twitter:description" content="定义类1234567891011class Person &amp;#123;    name: string;   //属性    constructor(_name: string) &amp;#123;        this.name = _name;    &amp;#125;   //构造函数    sayHello(): string &amp;#123;        return &quot;Hi,everyone&quot;">
+  
+  
+    <link rel="icon" href="images/avatar.jpg">
+  
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/pace.min.js"></script>
+  
+
+  
+  
+
+</head>
+</html>
+<body>
+  <div id="container">
+      <header id="header">
+    <div id="banner"></div>
+    <div id="header-outer">
+        <div id="header-menu" class="header-menu-pos animated">
+            <div class="header-menu-container">
+                <a href="/" class="left">
+                    <span class="site-title">Zipeng&#39;s Blog</span>
+                </a>
+                <nav id="header-menu-nav" class="right">
+                    
+                    <a href="/ ">
+                        <i class="fa fa-home"></i>
+                        <span>
+                            
+                            Home
+                            
+                        </span>
+                    </a>
+                    
+                    <a href="/archives ">
+                        <i class="fa fa-archive"></i>
+                        <span>
+                            
+                            Archives
+                            
+                        </span>
+                    </a>
+                    
+                    <a href="/about ">
+                        <i class="fa fa-user"></i>
+                        <span>
+                            
+                            About
+                            
+                        </span>
+                    </a>
+                    
+                </nav>
+                <a class="mobile-header-menu-button">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <div id="header-row">
+            <div id="logo">
+                <a href="/">
+                    <img src="/images/avatar.jpg" alt="logo" style="width: 100%;">
+                </a>
+            </div>
+            <div class="header-info">
+                <div id="header-title">
+                    
+                    <h2>
+                        李子鹏的博客
+                    </h2>
+                    
+                </div>
+                <!--<div id="header-description">-->
+                    <!---->
+                    <!--<h3>-->
+                        <!--李子鹏的博客-->
+                    <!--</h3>-->
+                    <!---->
+                <!--</div>-->
+            </div>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                    <a title="zipeng" target="_blank" href="//lizipeng.top ">
+                        <i class="fa fa-home fa-2x"></i></a>
+                    
+                    <a title="Github" target="_blank" href="//github.com/Touler ">
+                        <i class="fa fa-github fa-2x"></i></a>
+                    
+                    <a title="Weibo" target="_blank" href="//weibo.com/5891284753 ">
+                        <i class="fa fa-weibo fa-2x"></i></a>
+                    
+                    <a title="Twitter" target="_blank" href="//twitter.com/touler2 ">
+                        <i class="fa fa-twitter fa-2x"></i></a>
+                    
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+      <div class="outer">
+        <section id="main" class="body-wrap"><article id="post-TS学习之类" class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        <header class="article-header">
+            
+  
+    <h1 class="post-title" itemprop="name">
+      TS学习之类
+    </h1>
+    <div class="post-title-bar">
+      <ul>
+          
+              <li>
+                  <i class="fa fa-book"></i>
+                  
+                      <a href="/categories/前端/">前端</a>
+                  
+              </li>
+          
+        <li>
+          <i class="fa fa-calendar"></i>  2019-03-02
+        </li>
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+      </ul>
+    </div>
+  
+
+            
+        </header>
+        
+        <div class="article-entry post-content" itemprop="articleBody">
+            
+            
+            <h3 id="定义类"><a href="#定义类" class="headerlink" title="定义类"></a>定义类</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">class Person &#123;</span><br><span class="line">    name: string;   //属性</span><br><span class="line">    constructor(_name: string) &#123;</span><br><span class="line">        this.name = _name;</span><br><span class="line">    &#125;   //构造函数</span><br><span class="line">    sayHello(): string &#123;</span><br><span class="line">        <span class="built_in">return</span> <span class="string">"Hi,everyone"</span></span><br><span class="line">    &#125;   //方法</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">let</span> firstOne = new Person(<span class="string">"Fred"</span>)   //实例化类</span><br></pre></td></tr></table></figure>
+<h3 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h3><p>继承使用关键字extends，调用父类使用super，子类继承父类的属性和方法，并且子类可以改写父类的属性和方法<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">class Animal &#123;</span><br><span class="line">    name: string;</span><br><span class="line">    constructor(_name: string) &#123;</span><br><span class="line">        this.name = _name;</span><br><span class="line">    &#125;</span><br><span class="line">    skinColour(color: string = <span class="string">"black"</span>): void &#123;</span><br><span class="line">        console.log(`<span class="variable">$&#123;this.name&#125;</span> skin colour is <span class="variable">$&#123;color&#125;</span>`)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class Horse extends Animal &#123;</span><br><span class="line">    constructor(name: string) &#123; super(name) &#125;</span><br><span class="line">    skinColour(color: string = <span class="string">"brown"</span>): void &#123;</span><br><span class="line">        console.log(`I<span class="string">'am $&#123;this.name&#125;`);</span></span><br><span class="line"><span class="string">        super.skinColour("brown");</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">let horse = new Horse("horse");</span></span><br><span class="line"><span class="string">horse.skinColour()</span></span><br><span class="line"><span class="string">// I'</span>am horse</span><br><span class="line">// horse skin colour is brown</span><br></pre></td></tr></table></figure></p>
+<h3 id="public、private、protected、readonly"><a href="#public、private、protected、readonly" class="headerlink" title="public、private、protected、readonly"></a>public、private、protected、readonly</h3><h4 id="public"><a href="#public" class="headerlink" title="public"></a>public</h4><p>（不声明默认都为public，也可以显示的设置为public）<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">class Person &#123;</span><br><span class="line">    public name: string;   //属性</span><br><span class="line">    public constructor(_name: string) &#123;</span><br><span class="line">        this.name = _name;</span><br><span class="line">    &#125;   //构造函数</span><br><span class="line">    public sayHello(): string &#123;</span><br><span class="line">        <span class="built_in">return</span> <span class="string">"Hi,everyone"</span></span><br><span class="line">    &#125;   //方法</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">let</span> firstOne = new Person(<span class="string">"Fred"</span>)   //实例化类</span><br></pre></td></tr></table></figure></p>
+<h4 id="private"><a href="#private" class="headerlink" title="private"></a>private</h4><p>（private的成员不能被外部访问；比较带有private或protected成员的类型时，两个类型兼容的条件是private或protected的成员必须相同切来至同一个声明（同一个类））<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">class Person &#123;</span><br><span class="line">    private name: string;   </span><br><span class="line">    public constructor(_name: string) &#123;</span><br><span class="line">        this.name = _name;</span><br><span class="line">    &#125;   </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class Employee &#123;</span><br><span class="line">    private name: string;   </span><br><span class="line">    public constructor(_name: string) &#123;</span><br><span class="line">        this.name = _name;</span><br><span class="line">    &#125;   </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">let</span> firstOne = new Person(<span class="string">"Fred"</span>)</span><br><span class="line">console.log(firstOne.name)  //error: Property <span class="string">'name'</span> is private;</span><br><span class="line"><span class="built_in">let</span> lastOne = new Employee(<span class="string">"Fred"</span>)</span><br><span class="line">firstOne = lastOne  // error: Type <span class="string">'Employee'</span> is not assignable to <span class="built_in">type</span> <span class="string">'Person'</span>.Types have separate declarations of a private property <span class="string">'name'</span>.</span><br></pre></td></tr></table></figure></p>
+<h4 id="protected"><a href="#protected" class="headerlink" title="protected"></a>protected</h4><p>（protected和private相似，但protected成员可以在派生类中访问（能被继承，但不能在实例中访问，若构造函数是protected，则不能被实例化，只能被继承））<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">class Person &#123;</span><br><span class="line">    protected name: string;   </span><br><span class="line">    protected constructor(_name: string) &#123;</span><br><span class="line">        this.name = _name;</span><br><span class="line">    &#125;   </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class Employee extends Person &#123;</span><br><span class="line">    private department: string;   </span><br><span class="line">    public constructor(name: string,department:string) &#123;</span><br><span class="line">        super(name);</span><br><span class="line">        this.department = department;</span><br><span class="line">    &#125;   </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">let</span> Bob = new Person;   //error: Constructor of class <span class="string">'Person'</span> is protected</span><br><span class="line"><span class="built_in">let</span> fred = new Employee(<span class="string">"fred"</span>,<span class="string">"test"</span>);</span><br><span class="line">console.log(fred.name)  //error: Property <span class="string">'name'</span> is protected</span><br></pre></td></tr></table></figure></p>
+<h4 id="readonly"><a href="#readonly" class="headerlink" title="readonly"></a>readonly</h4><p>（设置属性为只读，必须在声明时或构造函数里初始化）<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">class Person &#123;</span><br><span class="line">    <span class="built_in">readonly</span> name: string;   </span><br><span class="line">    constructor(_name: string) &#123;</span><br><span class="line">        this.name = _name;</span><br><span class="line">    &#125;   </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">let</span> fred = new Person(<span class="string">"fred"</span>);</span><br><span class="line">fred.name = <span class="string">"Bob"</span>   //error: Cannot assign to <span class="string">'name'</span> because it is a constant or a <span class="built_in">read</span>-only property.</span><br></pre></td></tr></table></figure></p>
+<h3 id="参数属性"><a href="#参数属性" class="headerlink" title="参数属性"></a>参数属性</h3><p>参数属性通过给构造函数参数添加一个访问限定符来声明（public,private,protected）,把声明和赋值合并至一处<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">class Person &#123;</span><br><span class="line">    constructor(private name: string) &#123; &#125;</span><br><span class="line">    sayHello(): void &#123;</span><br><span class="line">        console.log(`my name is <span class="variable">$&#123;this.name&#125;</span>`)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">let</span> fred = new Person(<span class="string">"fred"</span>);</span><br><span class="line">fred.sayHello() //my name is fred</span><br></pre></td></tr></table></figure></p>
+<h3 id="存取器"><a href="#存取器" class="headerlink" title="存取器"></a>存取器</h3><p>get、set   只带有 get不带有set的存取器自动被推断为readonly<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">let</span> passcode = <span class="string">"secret passcode"</span>;</span><br><span class="line"></span><br><span class="line">class Employee &#123;</span><br><span class="line">    private _fullName: string;</span><br><span class="line"></span><br><span class="line">    get fullName(): string &#123;</span><br><span class="line">        <span class="built_in">return</span> this._fullName;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">set</span> fullName(newName: string) &#123;</span><br><span class="line">        <span class="keyword">if</span> (passcode &amp;&amp; passcode == <span class="string">"secret passcode"</span>) &#123;</span><br><span class="line">            this._fullName = newName;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">            console.log(<span class="string">"Error: Unauthorized update of employee!"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">let</span> employee = new Employee();</span><br><span class="line">employee.fullName = <span class="string">"Bob Smith"</span>;</span><br><span class="line"><span class="keyword">if</span> (employee.fullName) &#123;</span><br><span class="line">    console.log(employee.fullName);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="静态属性"><a href="#静态属性" class="headerlink" title="静态属性"></a>静态属性</h3><p>static，不能被实例访问，在类里面访问时，需要加上类名<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">class Person &#123;</span><br><span class="line">    static height:number = 180;</span><br><span class="line">    constructor(private name: string) &#123; &#125;</span><br><span class="line">    sayHello(): void &#123;</span><br><span class="line">        console.log(`my name is <span class="variable">$&#123;this.name&#125;</span>, I height is <span class="variable">$&#123;Person.height&#125;</span>`)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">let</span> fred = new Person(<span class="string">"fred"</span>);</span><br><span class="line">fred.sayHello() //my name is fred, I height is 180</span><br></pre></td></tr></table></figure></p>
+<h3 id="抽象类"><a href="#抽象类" class="headerlink" title="抽象类"></a>抽象类</h3><p>abstract，抽象类做为其它派生类的基类使用。 它们一般不会直接被实例化。抽象类中的抽象方法不包含具体实现并且必须在派生类中实现<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">abstract class Person &#123;</span><br><span class="line">    constructor(public name: string) &#123; &#125;</span><br><span class="line">    abstract sayHello():void;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class Empoloy extends Person&#123;</span><br><span class="line">    <span class="function"><span class="title">constructor</span></span>()&#123;</span><br><span class="line">        super(<span class="string">"Fred"</span>)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="title">sayHello</span></span>()&#123;</span><br><span class="line">        console.log(`my name is <span class="variable">$&#123;this.name&#125;</span>`)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">let</span> firstOne = new Empoloy();</span><br><span class="line">firstOne.sayHello();    //my name is Fred</span><br></pre></td></tr></table></figure></p>
+
+            <div class="post-copyright">
+    <div class="content">
+        <p>最后更新： 2019年03月02日 10:16</p>
+        <p>原始链接： <a class="post-url" href="/2019/03/02/TS学习之类/" title="TS学习之类">https://lizipeng.top/2019/03/02/TS学习之类/</a></p>
+        <footer>
+            <a href="https://lizipeng.top">
+                <img src="/images/avatar.jpg" alt="李子鹏">
+                李子鹏
+            </a>
+        </footer>
+    </div>
+</div>
+
+            
+            
+            
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;">赏</a>
+</div>
+
+<div id="reward" class="post-modal reward-lay">
+    <a class="close" href="javascript:;" id="reward-close">×</a>
+    <span class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        多谢点开,不接受捐赠,请多给建议~~
+        <i class="icon icon-quote-right"></i>
+    </span>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/images/wechat_code.png" style="width: 100%;" alt="打赏二维码">
+        </div>
+        <div class="reward-select">
+            
+            <label class="reward-select-item checked" data-id="wechat" data-wechat="/images/wechat_code.png">
+                <img class="reward-select-item-wechat" src="/images/wechat.png" alt="微信">
+            </label>
+            
+            
+            <label class="reward-select-item" data-id="alipay" data-alipay="/images/alipay_code.png">
+                <img class="reward-select-item-alipay" src="/images/alipay.png" alt="支付宝">
+            </label>
+            
+        </div>
+    </div>
+</div>
+
+
+            
+        </div>
+        <footer class="article-footer">
+            
+            
+<div class="post-share">
+    <a href="javascript:;" id="share-sub" class="post-share-fab">
+        <i class="fa fa-share-alt"></i>
+    </a>
+    <div class="post-share-list" id="share-list">
+        <ul class="share-icons">
+          <li>
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://lizipeng.top/2019/03/02/TS学习之类/&title=《TS学习之类》 — Zipeng's Blog&pic=https://lizipeng.topimages/avatar.jpg" data-title="微博">
+              <i class="fa fa-weibo"></i>
+            </a>
+          </li>
+          <li>
+            <a class="weixin share-sns" id="wxFab" href="javascript:;" data-title="微信">
+              <i class="fa fa-weixin"></i>
+            </a>
+          </li>
+          <li>
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://lizipeng.top/2019/03/02/TS学习之类/&title=《TS学习之类》 — Zipeng's Blog&source=李子鹏的博客。前端" data-title="QQ">
+              <i class="fa fa-qq"></i>
+            </a>
+          </li>
+          <li>
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://lizipeng.top/2019/03/02/TS学习之类/" data-title="Facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《TS学习之类》 — Zipeng's Blog&url=https://lizipeng.top/2019/03/02/TS学习之类/&via=https://lizipeng.top" data-title="Twitter">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://lizipeng.top/2019/03/02/TS学习之类/" data-title="Google+">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        </ul>
+     </div>
+</div>
+<div class="post-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;" id="wxShare-close">×</a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=https://lizipeng.top/2019/03/02/TS学习之类/" alt="微信分享二维码">
+</div>
+
+<div class="mask"></div>
+
+            
+            <ul class="article-footer-menu">
+                
+                
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/js/" class="color3">js</a>
+      
+    <a href="/tags/Ts/" class="color3">Ts</a>
+      
+    <a href="/tags/类/" class="color2">类</a>
+      
+  </li>
+
+            </ul>
+            
+        </footer>
+    </div>
+</article>
+
+
+    <aside class="post-toc-pos post-toc-top" id="post-toc">
+        <nav class="post-toc-wrap">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#定义类"><span class="post-toc-text">定义类</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#继承"><span class="post-toc-text">继承</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#public、private、protected、readonly"><span class="post-toc-text">public、private、protected、readonly</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#public"><span class="post-toc-text">public</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#private"><span class="post-toc-text">private</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#protected"><span class="post-toc-text">protected</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#readonly"><span class="post-toc-text">readonly</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#参数属性"><span class="post-toc-text">参数属性</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#存取器"><span class="post-toc-text">存取器</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#静态属性"><span class="post-toc-text">静态属性</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#抽象类"><span class="post-toc-text">抽象类</span></a></li></ol>
+        </nav>
+    </aside>
+    
+
+<nav id="article-nav">
+  
+    <a href="/2019/03/03/angular组件之间的通讯/" id="article-nav-newer" class="article-nav-link-wrap">
+
+      <span class="article-nav-title">
+        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
+        
+          angular组件之间的通讯
+        
+      </span>
+    </a>
+  
+  
+    <a href="/2018/11/05/团队协作/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">团队协作</span>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+    </a>
+  
+</nav>
+
+
+
+
+</section>
+        
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+<p>
+    <span id="busuanzi_container_site_uv" style="display:none">
+        总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style="display:none">
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+      <p>
+        Powered by  <a href="http://hexo.io/" target="_blank">Hexo</a>
+        Theme <a href="//github.com/wongminho/hexo-theme-miho" target="_blank">MiHo</a>
+      &copy; 2019 李子鹏<br>
+      </p>
+    </div>
+  </div>
+</footer>
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  var mihoConfig = {
+      root: "https://lizipeng.top",
+      animate: true,
+      isHome: false,
+      share: true,
+      reward: 1
+  }
+</script>
+<div class="sidebar">
+    <div id="sidebar-search" title="Search">
+        <i class="fa fa-search"></i>
+    </div>
+    <div id="sidebar-category" title="Categories">
+        <i class="fa fa-book"></i>
+    </div>
+    <div id="sidebar-tag" title="Tags">
+        <i class="fa fa-tags"></i>
+    </div>
+    <div id="sidebar-top">
+        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
+    </div>
+</div>
+<div class="sidebar-menu-box" id="sidebar-menu-box">
+    <div class="sidebar-menu-box-container">
+        <div id="sidebar-menu-box-categories">
+            <a class="category-link" href="/categories/http/">http</a><a class="category-link" href="/categories/习惯/">习惯</a><a class="category-link" href="/categories/前端/">前端</a><a class="category-link" href="/categories/教程/">教程</a><a class="category-link" href="/categories/浏览器/">浏览器</a>
+        </div>
+        <div id="sidebar-menu-box-tags">
+            <a href="/tags/DOM操作/" style="font-size: 10px;">DOM操作</a> <a href="/tags/Ts/" style="font-size: 10px;">Ts</a> <a href="/tags/angular/" style="font-size: 20px;">angular</a> <a href="/tags/chrome/" style="font-size: 10px;">chrome</a> <a href="/tags/http/" style="font-size: 10px;">http</a> <a href="/tags/js/" style="font-size: 20px;">js</a> <a href="/tags/主题/" style="font-size: 10px;">主题</a> <a href="/tags/接口/" style="font-size: 10px;">接口</a> <a href="/tags/效率/" style="font-size: 20px;">效率</a> <a href="/tags/类/" style="font-size: 10px;">类</a> <a href="/tags/组件/" style="font-size: 10px;">组件</a> <a href="/tags/转/" style="font-size: 10px;">转</a> <a href="/tags/随笔/" style="font-size: 20px;">随笔</a>
+        </div>
+    </div>
+    <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
+</div>
+<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
+    <div class="mobile-header-menu-container">
+        <span class="title">Menus</span>
+        <ul class="mobile-header-menu-navbar">
+            
+            <li>
+                <a href="/">
+                    <i class="fa fa-home"></i><span>Home</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/archives">
+                    <i class="fa fa-archive"></i><span>Archives</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/about">
+                    <i class="fa fa-user"></i><span>About</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="mobile-header-tag-container">
+        <span class="title">Tags</span>
+        <div id="mobile-header-container-tags">
+            <a href="/tags/DOM操作/" style="font-size: 10px;">DOM操作</a> <a href="/tags/Ts/" style="font-size: 10px;">Ts</a> <a href="/tags/angular/" style="font-size: 20px;">angular</a> <a href="/tags/chrome/" style="font-size: 10px;">chrome</a> <a href="/tags/http/" style="font-size: 10px;">http</a> <a href="/tags/js/" style="font-size: 20px;">js</a> <a href="/tags/主题/" style="font-size: 10px;">主题</a> <a href="/tags/接口/" style="font-size: 10px;">接口</a> <a href="/tags/效率/" style="font-size: 20px;">效率</a> <a href="/tags/类/" style="font-size: 10px;">类</a> <a href="/tags/组件/" style="font-size: 10px;">组件</a> <a href="/tags/转/" style="font-size: 10px;">转</a> <a href="/tags/随笔/" style="font-size: 20px;">随笔</a>
+        </div>
+    </div>
+</div>
+<div class="search-wrap">
+    <span class="search-close">&times;</span>
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+            <i class="icon icon-lg icon-chevron-left"></i>
+        </a>
+        <input class="search-field" placeholder="Search..." id="keywords">
+        <a id="search-submit" href="javascript:;">
+            <i class="fa fa-search"></i>
+        </a>
+    <div class="search-container" id="search-container">
+        <ul class="search-result" id="search-result">
+        </ul>
+    </div>
+</div>
+
+<div id="search-tpl">
+    <li class="search-result-item">
+        <a href="{url}" class="search-item-li">
+            <span class="search-item-li-title" title="{title}">{title}</span>
+        </a>
+    </li>
+</div>
+<script src="/js/search.js"></script>
+<script src="/js/main.js"></script>
+
+
+  <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
+  <div id="particles"></div>
+  <script src="/js/particles.js"></script>
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  <script src="//cdn.bootcss.com/scrollReveal.js/3.0.5/scrollreveal.js"></script>
+  <script src="/js/animate.js"></script>
+
+
+  <script src="/js/pop-img.js"></script>
+  <script>
+     $(".article-entry p img").popImg();
+  </script>
+
+  </div>
+</body>
+</html>
