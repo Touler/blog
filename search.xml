@@ -28,6 +28,31 @@
     </entry>
     
     <entry>
+      <title>angular组件之间的通讯</title>
+      <link href="/2019/03/03/angular%E7%BB%84%E4%BB%B6%E4%B9%8B%E9%97%B4%E7%9A%84%E9%80%9A%E8%AE%AF/"/>
+      <url>/2019/03/03/angular%E7%BB%84%E4%BB%B6%E4%B9%8B%E9%97%B4%E7%9A%84%E9%80%9A%E8%AE%AF/</url>
+      
+        <content type="html"><![CDATA[<p>angluar 组件之间如何联系，根据不同业务和功能等的需求，选择高效的通讯方式</p><a id="more"></a><h3 id="父→子-input"><a href="#父→子-input" class="headerlink" title="父→子 input"></a>父→子 input</h3><pre><code>&lt;child [conent]=&quot;i&quot;&gt;&lt;/child&gt;  </code></pre><p><br></p><pre><code>@Input() conent: any;</code></pre><h3 id="子→父-output"><a href="#子→父-output" class="headerlink" title="子→父 output"></a>子→父 output</h3><pre><code>&lt;child (sendSum)=&quot;getChildSum($event)&quot;&gt;&lt;/child&gt;</code></pre><p><br></p><pre><code>@Output() sendSum: EventEmitter&lt;any&gt; = new EventEmitter();onStart(): void {    this.sendSum.emit(any);}</code></pre><h3 id="子获得父实例"><a href="#子获得父实例" class="headerlink" title="子获得父实例"></a>子获得父实例</h3><pre><code>constructor( @Host() @Inject(forwardRef(() =&gt; Parent)) parent: Parent) {    console.log(parent);}</code></pre><p><br>    </p><pre><code>constructor( @Inject(Parent) private parent: any) {    console.log(parent);}</code></pre><h3 id="父获得子实例"><a href="#父获得子实例" class="headerlink" title="父获得子实例"></a>父获得子实例</h3><pre><code>@ViewChild(ChildPage) child:ChildPage;</code></pre><h3 id="service"><a href="#service" class="headerlink" title="service"></a>service</h3><pre><code>export class Service {    i:number = 0;}</code></pre><h3 id="EventEmitter"><a href="#EventEmitter" class="headerlink" title="EventEmitter"></a>EventEmitter</h3><h4 id="1-EventEmitter"><a href="#1-EventEmitter" class="headerlink" title="1.EventEmitter"></a>1.EventEmitter</h4><pre><code>change: EventEmitter&lt;number&gt;;constructor(){    this.change = new EventEmitter();}</code></pre><p><br></p><pre><code>constructor(private service:Service) {    service.change.emit(++this.i);}</code></pre><h4 id="2-EventEmitter3"><a href="#2-EventEmitter3" class="headerlink" title="2.EventEmitter3"></a>2.EventEmitter3</h4><pre><code>public _event;constructor() {    this._event = new eventemitter3();}  </code></pre><p><br></p><pre><code>ngOnInit() {    this.eventService._event.on(&apos;sendNum&apos;, this.acceptNum, this);}public acceptNum(num) {    console.log(num);}</code></pre><p><br></p><pre><code>this.eventService._event.emit(&apos;sendNum, this.num);          </code></pre><h3 id="订阅"><a href="#订阅" class="headerlink" title="订阅"></a>订阅</h3><h4 id="1-Subject"><a href="#1-Subject" class="headerlink" title="1.Subject"></a>1.Subject</h4><pre><code>import { Subject } from &apos;rxjs/Subject&apos;;private Source=new Subject&lt;any&gt;();Status$=this.Source.asObservable();StatusMission(message: any) {    this.Source.next(message);}</code></pre><p><br></p><pre><code>constructor(public service:myService) {    setInterval(()=&gt; {         this.service.StatusMission(this.i++);    }, 1000)}</code></pre><p><br>  </p><pre><code>subscription: Subscription;constructor(private Service: myService) {    this.subscription = Service.Status$.subscribe(message =&gt; {        this.i=message;    });}ngOnDestroy() {    this.subscription.unsubscribe();}</code></pre><h4 id="2-ReplaySubject"><a href="#2-ReplaySubject" class="headerlink" title="2.ReplaySubject"></a>2.ReplaySubject</h4><pre><code>import {ReplaySubject} from &quot;rxjs/ReplaySubject&quot;;private _sendMessage: ReplaySubject&lt;any&gt; = new ReplaySubject&lt;any&gt;; public sendMessage(message: any): Observavle&lt;any&gt;{   this._sendMessage.next(message); } public getMessage(): Observable &lt;any&gt;{    return this._sendMessage.asObservable(); } </code></pre><p><br></p><pre><code>this.communicateService.sendMessage(&apos;send a message&apos;);</code></pre><p><br></p><pre><code>this.communicateService.getMessage().subscribe((message: any)=&gt;{    console.log(message);})</code></pre><h3 id="路由传值"><a href="#路由传值" class="headerlink" title="路由传值"></a>路由传值</h3><pre><code>import { Router } from &apos;@angular/router&apos;;import { ActivatedRoute, Params } from &apos;@angular/router&apos;;constructor(private router: Router,private route: ActivatedRoute,) { }</code></pre><p><br></p><pre><code>&lt;button [routerLink]=&quot;[&apos;/about&apos;,1]&quot;&gt;跳转&lt;/button&gt;&lt;button [routerLink]=&quot;[&apos;/about&apos;,&quot;home&quot;]&quot;&gt;跳转&lt;/button&gt;</code></pre><p><br></p><pre><code>this.id = this.route.snapshot.params[&apos;id&apos;];</code></pre><p><br></p><pre><code>this.router.navigate([&apos;/about&apos;], {    queryParams: {      id: &apos;1&apos;,      status: true    }});</code></pre><p><br></p><pre><code>this.route.queryParams.subscribe((params: Params) =&gt; {    this.id = params[&apos;id&apos;];    this.status = params[&apos;status&apos;];})</code></pre><h3 id="localstorage"><a href="#localstorage" class="headerlink" title="localstorage"></a>localstorage</h3><pre><code>window.localStorage.setItem(&quot;test&quot;, JSON.stringify({ key: &apos;test&apos;, value: 1 }));</code></pre><p><br></p><pre><code>const obj = JSON.parse(window.localStorage.getItem(&quot;test&quot;));</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> angular </tag>
+            
+            <tag> 组件 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>TS学习之类</title>
       <link href="/2019/03/02/TS%E5%AD%A6%E4%B9%A0%E4%B9%8B%E7%B1%BB/"/>
       <url>/2019/03/02/TS%E5%AD%A6%E4%B9%A0%E4%B9%8B%E7%B1%BB/</url>
